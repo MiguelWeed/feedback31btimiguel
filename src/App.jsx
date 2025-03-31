@@ -1,5 +1,5 @@
 import  iconStar from "./assets/icon-star.svg"
-import illustrationThankYou from "./assets/illustrationThankYou-thank-you.svg"
+import illustrationThankYou from "./assets/illustration-thank-you.svg"
 import { useState } from "react"
 
 export function App() {
