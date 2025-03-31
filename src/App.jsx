@@ -9,6 +9,7 @@ export function App() {
 
   }
   return (
+    notaAvaliacao === 0 ? (
     <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass">
       <div className="bg-dark-blue w-fit p-4 rounded-full mb-4">
         <img src={iconStar} alt="icon star" />
@@ -30,6 +31,12 @@ export function App() {
 
       <p>{notaAvaliacao}</p>
     </div>
-    
+    ) : (
+      <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass">
+      
+
+      <p>{notaAvaliacao}</p>
+    </div>
+    )
   )
 }
