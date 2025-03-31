@@ -3,13 +3,19 @@ import { useState } from "react"
 
 export function App() {
   const [notaAvaliacao, setNotaAvaliacao] = useState(0)
+  const [submited, setSubmited] = useState(false)
 
   function handleMudarNotaAvaliacao(nota) {
     setNotaAvaliacao(nota)
-
+  }
+  function handleSubmit() {
+    if (notaAvaliacao !== 0) {
+      setSubmited(true)
+      return
+    }
   }
   return (
-    notaAvaliacao === 0 ? (
+    submited === false ? (
     <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass">
       <div className="bg-dark-blue w-fit p-4 rounded-full mb-4">
         <img src={iconStar} alt="icon star" />
@@ -27,7 +33,7 @@ export function App() {
         <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold" onClick={() => handleMudarNotaAvaliacao(5)} />
       </div>
 
-      <button className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3">Submit</button>
+      <button onClick={handleSubmit} className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3">Submit</button>
 
       <p>{notaAvaliacao}</p>
     </div>
