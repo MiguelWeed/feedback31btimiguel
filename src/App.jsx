@@ -19,7 +19,7 @@ export function App() {
   }
   return (
     submited === false ? (
-      <CardInicial handleMudarNotaAvaliacao={handleMudarNotaAvaliacao} handleSubmit={handleSubmit} />
+      <CardInicial setNotaAvaliacao={setNotaAvaliacao} handleSubmit={handleSubmit} />
     ) : (
       <CardFinal notaAvaliacao={notaAvaliacao}/>
     )
